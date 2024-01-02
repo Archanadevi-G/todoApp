@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&family=Poppins&family=Young+Serif&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* #5b7065, black */
+body {
+  background: rgba(48, 64, 64, 1);
+  background: -webkit-radial-gradient(
+    center,
+    rgba(48, 64, 64, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: -moz-radial-gradient(
+    center,
+    rgba(48, 64, 64, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(48, 64, 64, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  font-family: "Poppins", cursive;
+  min-height: 100vh;
+}
+
+button {
+  height: fit-content;
+  cursor: pointer;
+  color: #04202c;
+  background-color: #c9d1c8;
+}
+
+.app {
+  width: 600px;
+  margin: auto;
+  padding-top: 50px;
+  color: white;
+  text-align: center;
+}
+
+.input-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 25px 0px 10px 0px;
+}
+
+.to-do-input input {
+  width: 250px;
+  font-family: inherit;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 10px;
+  outline: none;
+}
+
+.to-do-input button {
+  color: #5b7065;
+  font-family: inherit;
+  border: none;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.to-do-list i {
+  color: #c9d1c8;
+  cursor: pointer;
+}
+
+.to-do-list .completeBtn {
+  color: #0f0;
+  font-size: 30px;
+  margin: auto;
+}
+.completed {
+  text-decoration: line-through;
+  color: #ccc;
+  opacity: 0.5;
+}
+
+.to-do-list .deleteBtn {
+  color: #f00;
+  font-size: 25px;
+  padding-left: 20px;
+  margin: auto;
+}
+
+.to-do-list button {
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(#ffb347, #ffcc33);
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.item:nth-child(4n + 1) {
+  background: linear-gradient(90deg, #834d96, #d04ed6);
+}
+.item:nth-child(4n + 2) {
+  background: linear-gradient(90deg, #fa0087, #ff0cf1 100%);
+}
+.item:nth-child(4n + 3) {
+  background: linear-gradient(90deg, #149fff, #117aff);
+}
+
+.input-controller {
+  display: flex;
+  gap: 10px;
+}
+
+.input-controller textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+  line-height: 0.9;
+  color: white;
+  border-radius: 10px;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-family: inherit;
+  transition: all 0.3s ease-in-out;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px white;
+}
+
+.edit-controller {
+  display: flex;
+  gap: 5px;
+}
+
+.update-controller {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+    text-align: center;
+  }
+
+  .input-header {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .to-do-input {
+    display: flex;
+  }
+
+  .to-do-input input {
+    width: 300px;
+  }
+}
